@@ -1,0 +1,22 @@
+table_set_default hash_table hash_action
+table_add innat_table inverse_nat 167772161 => 118949655
+table_add innat_table inverse_nat 167772162 => 118949655
+table_add innat_table inverse_nat 167772163 => 118949655
+table_add innat_table inverse_nat 167772164 => 118949655
+table_add map_table map_dip 0 => 167772161 2 1
+table_add map_table map_dip 1 => 167772162 3 2
+table_add map_table map_dip 2 => 167772163 4 3
+table_add map_table map_dip 3 => 167772164 5 4
+table_add syn_table push_to_controller 1 1 => 5
+table_add checkbloom_table checkbloom0 0 =>
+table_add checkbloom_table checkbloom1 1 =>
+table_add writebloom_table writebloom1 0 0 =>
+table_add writebloom_table writebloom0 1 0 =>
+table_add route_table select_dip 0 0 => 0
+table_add route_table select_dip 1 0 => 0
+table_add route_table select_dip 2 0 => 0
+table_add route_table select_dip 3 0 => 0
+table_add route_table select_dip 0 1 => 0
+table_add route_table select_dip 1 1 => 0
+table_add route_table select_dip 2 1 => 0
+table_add route_table select_dip 3 1 => 0
