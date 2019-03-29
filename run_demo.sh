@@ -19,14 +19,14 @@ SWITCH_PATH=/path/to/behavioral-model/targets/simple_switch/simple_switch
 CLI_PATH=/path/to/behavioral-model/targets/simple_switch/sswitch_CLI
 
 set -m
-p4c --std p4-14 p4src/LBswitch.p4
+p4c --std p4-14 p4src/Loom.p4
 # This gives libtool the opportunity to "warm-up"
 sudo $SWITCH_PATH >/dev/null 2>&1
 
-sudo $SWITCH_PATH LBswitch.json \
+sudo $SWITCH_PATH Loom.json \
     -i 0@veth0 -i 1@veth2 -i 2@veth4 -i 3@veth6 -i 4@veth8 -i 5@veth10\
     --nanolog ipc:///tmp/bm-0-log.ipc \
      &
 sleep 8
-$CLI_PATH LBswitch.json < commands.txt
+$CLI_PATH Loom.json < commands.txt
 echo "READY!!!"
